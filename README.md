@@ -29,7 +29,9 @@ All pages share one stylesheet (`style.css`) and the same navbar/footer markup, 
 ├── index.html    Main portfolio page
 ├── my-story.html My Story page
 ├── articles.html Articles page
-├── style.css     All styles, shared by all pages
+├── 404.html      Custom "page not found" page (served automatically by GitHub Pages)
+├── style.css     All styles, shared by all pages (includes dark mode)
+├── theme.js      Dark mode toggle button logic
 ├── images/       All local image assets (photos, logos, icons, tech badges)
 └── README.md     This file
 ```
@@ -152,6 +154,15 @@ All images are stored locally in `images/` and referenced with relative paths (n
 2. In the repository, go to **Settings, then Pages, then Source**, and select the `main` branch.
 3. The site is served at the repository's default URL: `https://serafin-burgulla-marca.github.io/`. No custom domain is configured (there is no `CNAME` file).
 4. All internal links are relative (e.g. `my-story.html`, `index.html#about-me`), never root-absolute (`/my-story`). Keep new links relative so they work both on Pages and when opening the files locally.
+
+---
+
+## Dark Mode, Analytics, and 404
+
+- **Dark mode:** each page has a small inline script in `<head>` that sets `data-theme="dark"` or `"light"` on `<html>` before the page paints (saved choice first, otherwise the visitor's system setting). The moon/sun button in the navbar (`.theme-toggle`, wired up in `theme.js`) flips it and saves the choice in `localStorage`. Dark styles live in the `DARK MODE` block of `style.css` as `html[data-theme="dark"] …` overrides; new components need a matching override there.
+- **Analytics:** every page loads GoatCounter (`https://serafinburgulla.goatcounter.com`). The dashboard is at that same address.
+- **404 page:** `404.html` uses root-absolute paths (`/style.css`, `/images/...`) because GitHub Pages serves it for missing URLs at any depth.
+- **New pages:** copy the `<head>` theme script, the `.nav-actions` navbar block, and the two `<script>` tags before `</body>` from an existing page.
 
 ---
 
