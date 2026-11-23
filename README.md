@@ -3,7 +3,7 @@
 
 Personal portfolio for **Serafin Burgulla**, a Political Economy student at Georgetown University. Originally built on Webflow, then migrated to a self-hosted static site for GitHub Pages.
 
-Live at: `https://serafin-burgulla-marca.github.io/serafinburgulla/`
+Live at: `https://serafin-burgulla-marca.github.io/`
 
 ---
 
@@ -150,8 +150,8 @@ All images are stored locally in `images/` and referenced with relative paths (n
 
 1. Push `index.html`, `my-story.html`, `articles.html`, article subpages (e.g. `the-day-i-heard-my-hero-cry.html`), `style.css`, and `images/` to the repository root on the `main` branch.
 2. In the repository, go to **Settings, then Pages, then Source**, and select the `main` branch.
-3. The site is served at the repository's default URL: `https://serafin-burgulla-marca.github.io/serafinburgulla/`. No custom domain is configured (there is no `CNAME` file).
-4. Because the site lives under the `/serafinburgulla/` subpath, all internal links are relative (e.g. `my-story.html`, `index.html#about-me`), never root-absolute (`/my-story`). Keep new links relative so they work both on Pages and when opening the files locally.
+3. The site is served at the repository's default URL: `https://serafin-burgulla-marca.github.io/`. No custom domain is configured (there is no `CNAME` file).
+4. All internal links are relative (e.g. `my-story.html`, `index.html#about-me`), never root-absolute (`/my-story`). Keep new links relative so they work both on Pages and when opening the files locally.
 
 ---
 
