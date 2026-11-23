@@ -3,7 +3,7 @@
 
 Personal portfolio for **Serafin Burgulla**, a Political Economy student at Georgetown University. Originally built on Webflow, then migrated to a self-hosted static site for GitHub Pages.
 
-Live at: `https://www.serafinburgulla.com`
+Live at: `https://serafin-burgulla-marca.github.io/serafinburgulla/`
 
 ---
 
@@ -30,7 +30,6 @@ All pages share one stylesheet (`style.css`) and the same navbar/footer markup, 
 ├── my-story.html My Story page
 ├── articles.html Articles page
 ├── style.css     All styles, shared by all pages
-├── CNAME         Custom domain config for GitHub Pages (www.serafinburgulla.com)
 ├── images/       All local image assets (photos, logos, icons, tech badges)
 └── README.md     This file
 ```
@@ -142,17 +141,17 @@ All images are stored locally in `images/` and referenced with relative paths (n
 | Styling | Vanilla CSS (no preprocessor, no framework) |
 | Fonts | Google Fonts, Open Sans (body) plus Inter (headings) |
 | Interactivity | A small inline script toggles the mobile nav menu; no other JavaScript |
-| Hosting | GitHub Pages (static), custom domain via `CNAME` |
+| Hosting | GitHub Pages (static), default `github.io` URL |
 | Build tools | None, no bundler and no framework |
 
 ---
 
 ## Deployment (GitHub Pages)
 
-1. Push `index.html`, `my-story.html`, `articles.html`, article subpages (e.g. `the-day-i-heard-my-hero-cry.html`), `style.css`, `images/`, and `CNAME` to the repository root on the `main` branch.
+1. Push `index.html`, `my-story.html`, `articles.html`, article subpages (e.g. `the-day-i-heard-my-hero-cry.html`), `style.css`, and `images/` to the repository root on the `main` branch.
 2. In the repository, go to **Settings, then Pages, then Source**, and select the `main` branch.
-3. The `CNAME` file points the site at the custom domain `www.serafinburgulla.com`. DNS for that domain must have a CNAME record pointing to the GitHub Pages host.
-4. Without the custom domain, the site would otherwise be served at the repository's default `github.io` URL.
+3. The site is served at the repository's default URL: `https://serafin-burgulla-marca.github.io/serafinburgulla/`. No custom domain is configured (there is no `CNAME` file).
+4. Because the site lives under the `/serafinburgulla/` subpath, all internal links are relative (e.g. `my-story.html`, `index.html#about-me`), never root-absolute (`/my-story`). Keep new links relative so they work both on Pages and when opening the files locally.
 
 ---
 
